@@ -6,7 +6,9 @@ import TodoItem from './TodoItem';
 import ItemAddComponent from './ItemAddComponent';
 import { deletePost, openModal, closeModal } from './actions/index';
 
-function TodoList({ todos, onDelete, modalIsOpen, closeM, openM }) {
+function TodoList({
+ todos, onDelete, modalIsOpen, closeM, openM 
+}) {
   if (!todos) {
     return <div>No Data</div>;
   }

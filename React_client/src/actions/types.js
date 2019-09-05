@@ -5,3 +5,4 @@ export const ACTIVATE_GEOD = 'CTIVATE_GEOD';
 export const CLOSE_GEOD = 'CLOSE_GEOD';
 export const OPEN_MODAL = 'OPEN_MODAL';
 export const CLOSE_MODAL = 'CLOSE_MODAL';
+export const ADD_TODO = 'ADD_TODO';

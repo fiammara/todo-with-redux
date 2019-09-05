@@ -38,3 +38,9 @@ export default connect(
 //  https://appdividend.com/2018/10/03/redux-thunk-tutorial-example/
 //  https://appdividend.com/2018/06/15/react-redux-axios-tutorial-example/
 //  https://tighten.co/blog/react-101-using-redux
+
+/* componentDidMount() {
+  const { dispatch, getleftpaneProductCatalogue }
+
+  dispatch(getleftpaneProductCatalogue())   
+} */

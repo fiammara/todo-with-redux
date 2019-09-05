@@ -6,7 +6,8 @@ import {
   ACTIVATE_GEOD,
   CLOSE_GEOD,
   OPEN_MODAL,
-  CLOSE_MODAL
+  CLOSE_MODAL,
+  ADD_TODO
 } from './types';
 
 const archiveUrl = 'http://localhost:8080/api/archive';
@@ -55,7 +56,12 @@ export const deletePost = (id) => (dispatch) =>
     .then((response) => {
       dispatch(deletePostSuccess(response.data));
     })
-
+    .then(() => {
+      dispatch(fetchTodoData());
+    })
+    .then(() => {
+      dispatch(fetchArchiveData());
+    })   
     .catch((error) => {
       throw error;
     });
@@ -70,11 +76,27 @@ export const closeGeod = () => ({
 });
 
 export const openModal = () => ({
-  type: OPEN_MODAL,
- 
+  type: OPEN_MODAL
 });
 
 export const closeModal = () => ({
-  type: CLOSE_MODAL,
-  
+  type: CLOSE_MODAL
 });
+
+export const createPostSuccess = (data) => ({
+  type: ADD_TODO,
+  payload: {
+    id: data.id,
+    name: data.name
+  }
+});
+
+export const createPost = ({ newItem }) => (dispatch) =>
+  axios
+    .post(`${todoUrl}/addTodo`, { newItem })
+    .then((response) => {
+      dispatch(createPostSuccess(response.data));
+    })
+    .catch((error) => {
+      throw error;
+    });

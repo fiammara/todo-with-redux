@@ -30,9 +30,17 @@ function Home({ geod, activate, close }) {
 Home.propTypes = {
   close: PropTypes.func.isRequired,
   activate: PropTypes.func.isRequired,
-  // title: PropTypes.string,
- // geod: PropTypes.element.isRequired
+  geod: PropTypes.shape({
+    title: PropTypes.string  
+  }) 
 };
+
+Home.defaultProps = {
+  geod: PropTypes.shape({
+    title: ''  
+  }) 
+};
+
 const mapStateToProps = (state) => ({
   geod: state.geod
 });
