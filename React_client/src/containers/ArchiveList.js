@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import ArchiveItem from './ArchiveItem';
+import ArchiveItem from '../components/ArchiveItem';
 
 function ArchiveList({ data }) {
   if (!data) {

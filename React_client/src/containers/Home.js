@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { activateGeod, closeGeod } from './actions/index';
+import { activateGeod, closeGeod } from '../actions/index';
 
 function Home({ geod, activate, close }) {
   return (

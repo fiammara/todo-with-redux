@@ -3,10 +3,10 @@ import '../App.css';
 import {
   Route, Switch, BrowserRouter 
 } from 'react-router-dom';
-import TodoList from '../TodoList';
-import ArchiveList from '../ArchiveList';
+import TodoList from '../containers/TodoList';
+import ArchiveList from '../containers/ArchiveList';
 import Header from './Header';
-import Home from '../Home';
+import Home from '../containers/Home';
 
 const App = () => (
   
